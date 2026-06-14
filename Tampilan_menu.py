@@ -98,7 +98,8 @@ while True:
       while True:
          print ("===== Menu Laporan Harian =====")
          print("1. Jumlah pasien hari ini")
-         print("2. Riwayat pembayaran")
+         print("2. Tambah Pembayaran")
+         print("3. Riwayat pembayaran")
          print("0. Kembali") 
 
          try: 
@@ -107,16 +108,18 @@ while True:
             print("Input Harus berupa angka!")
             continue
 
-            if pilih_laporan == 1:
-               laporan_harian.jumlah_pasien_hari_ini()
+         if pilih_laporan == 1:
+            laporan_harian.jumlah_pasien_hari_ini()
                #tampilkan jumlah pasien hari ini
-            elif pilih_laporan == 2:
-               laporan_harian.lihat_riwayat_pembayaran()
+         elif pilih_laporan == 2:
+            laporan_harian.tambah_pembayaran(data_pasien)
+         elif pilih_laporan == 3:
+            laporan_harian.lihat_riwayat_pembayaran()
                #tampilkan riwayat pembayaran pasien
-            elif pilih_laporan == 0:
-               break
-            else:
-               print("Pilihan tidak valid!")
+         elif pilih_laporan == 0:
+            break
+         else:
+            print("Pilihan tidak valid!")
 
    elif pilihan == 4:
       rekam_medis.undo_tindakan(data_pasien)
