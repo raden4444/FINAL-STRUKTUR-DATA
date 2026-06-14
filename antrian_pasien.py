@@ -12,8 +12,6 @@ def masuk_antrian(id_pasien):
         return
     
     urgensi = data_pasien[id_pasien].tingkat_urgensi
-    print("DEBUG")
-    print(urgensi)
     if urgensi == "Tinggi":
         antrian_tinggi.append(id_pasien)
         print("Pasien masuk antrian PRIORITAS TINGGI.")
