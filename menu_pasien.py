@@ -22,8 +22,6 @@ def tambah_pasien():
 
     while True:
         id_pasien = (input("Masukkan ID Pasien = ")).strip().upper()
-        print("DEBUG")
-        print(id_pasien)
         if id_pasien == "":
            print("ID pasien tidak boleh kosong")
         elif id_pasien in data_pasien:
